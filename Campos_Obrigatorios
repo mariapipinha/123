@@ -1,0 +1,61 @@
+<html>
+
+
+
+	<style>
+		.campo-obrigatorio:after {
+            content: " *";
+            color: red;
+            margin-left: 4px;
+        </style>
+
+	<body>
+
+		<h1> Formularios com campos obrigatorios </h1>
+
+			<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+
+  			 <label for="campo2" class="campo-obrigatorio">Name:</label>
+  			 <input type="text" id="Name" name="campo2" class="campo-obrigatorio" required>
+			 
+			
+			
+			
+			<br></br>
+			 <label for="E-mail" class="campo-obrigatorio">E-mail:</label>
+			<input type="text" name="email" required:>
+
+			<br></br>
+
+			Website: <input type="text" name="website" >
+
+			<br></br>
+
+			Comment: <textarea name="comment" rows="5" cols="40"></textarea>
+
+			<h3>Gender</h3>
+			<br></br>
+
+			
+			
+				
+				<input type="radio" name="gender" value="female" required >Female 
+
+				
+				<input type="radio" name="gender" value="male" required >Male
+
+
+				<label  class="campo-obrigatorio"></label>
+				<input type="radio" name="gender" value="other" required >Other
+
+				<br></br>
+
+				<input type="submit">
+
+				</form>
+
+
+			
+
+	</body>
+</html>
